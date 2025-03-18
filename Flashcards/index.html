@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorize with Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Placeholder for the Navbar -->
+<div id="navbar-placeholder"></div>
+
+    <h1>Memorize with Flashcards</h1>
+
+    <!-- Category input placed separately -->
+    <div class="category-container">
+        <h3>Category/Subject</h3>
+        <input type="text" id="category" placeholder="Enter category/subject (optional)">
+        <p>Leave empty to add to the default category or type a new one.</p>
+    </div>
+    
+    <!-- Flashcard creation form -->
+    <div class="form-container">
+        <input type="text" id="question" placeholder="Enter question here..." aria-label="Flashcard question" required>
+        <input type="text" id="answer" placeholder="Enter answer here..." aria-label="Flashcard answer" required>
+        <button onclick="addFlashcard()">Add Flashcard</button>
+
+        <!-- Generate Flashcards from Text Section -->
+        <div class="text-to-flashcard-container">
+            <h3>Generate Flashcards from Text</h3>
+            <textarea id="textInput" placeholder="Paste text here..." aria-label="Input text to generate flashcards"></textarea>
+            <button onclick="generateFlashcards()">Generate Flashcards</button>
+        </div>
+    </div>
+
+    <!-- Delete Category Button -->
+    <button id="deleteCategoryBtn" class="delete-category-btn" onclick="deleteCategory()">Delete Category</button>
+
+    <!-- Flashcards will be appended here -->
+    <div class="container" id="flashcard-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

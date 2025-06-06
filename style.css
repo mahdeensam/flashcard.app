@@ -5,133 +5,207 @@
 }
 
 body {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('wallpaper.png') center center / cover no-repeat fixed;
+    font-family: 'Times New Roman', Times, serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 0;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+}
+
+/* Header section matching Fast Write */
+.header {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 h1 {
-    margin-top: 20px;
-    color: #333;
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: #ffffff;
+    line-height: 1.1;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.gradient-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.subtext {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main content area */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    flex: 1;
+}
+
+/* Form container styling */
 .form-container {
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .form-container input {
-    padding: 10px;
-    margin: 10px 0;
     width: 100%;
-    border-radius: 25px;
-    border: 2px solid #87288f;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.2s ease;
     outline: none;
-    transition: all 0.3s ease;
 }
 
 .form-container input:focus {
-    border-color: #212121;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input::placeholder {
+    color: #9ca3af;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .form-container button {
-    padding: 10px 30px;
-    margin-top: 15px;
-    background: linear-gradient(135deg, #161616, #434343);
-    color: white;
+    padding: 14px 32px;
+    background: #000000;
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    margin-top: 16px;
 }
 
 .form-container button:hover {
-    background: linear-gradient(135deg, #434343, #161616);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    background: #1a1a1a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for Category Section */
+/* Category section styling */
 .category-container {
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     text-align: center;
 }
 
 .category-container h3 {
-    font-size: 24px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.category-container input {
-    padding: 10px;
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.category-container input:focus {
-    border-color: #7f0099;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .category-container p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/* Container for flashcards */
 .container {
     width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .category-section {
-    margin-bottom: 30px;
-    padding-top: 10px;
+    margin-bottom: 40px;
+    padding-top: 20px;
 }
 
 .category-section h2 {
-    font-size: 24px;
-    color: #1d1e1d;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 600;
     text-align: left;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #000000;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Flex container for flashcards */
+.category-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Flashcard container */
 .flashcard-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    justify-items: center;
 }
 
 .flashcard {
-    width: 200px;
-    height: 320px;
-    margin: 10px;
+    width: 280px;
+    height: 350px;
     perspective: 1000px;
     cursor: pointer;
     position: relative;
@@ -143,25 +217,26 @@ h1 {
     position: absolute;
     backface-visibility: hidden;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.6s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px 20px;
+    padding: 24px;
 }
 
 .flashcard .front {
-    background: linear-gradient(135deg, #4d4d4d, #2b2b2b);
-    color: white;
+    background: #ffffff;
+    color: #1a1a1a;
     transform: rotateY(0deg);
 }
 
 .flashcard .back {
-    background: linear-gradient(135deg, #5a127d, #a064cf);
-    color: white;
+    background: #f9fafb;
+    color: #1a1a1a;
     transform: rotateY(180deg);
 }
 
@@ -174,129 +249,214 @@ h1 {
 }
 
 .flashcard-header {
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 0.85rem;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .flashcard-content {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
 }
 
-/* Error styling for validation */
-input:invalid {
-    border: 2px solid rgb(94, 0, 0);
-}
-
-input:valid {
-    border: 2px solid rgb(106, 4, 214);
-}
-
-/* Responsive layout for mobile */
-@media (max-width: 600px) {
-    .form-container {
-        width: 90%;
-    }
-
-    .flashcard {
-        width: 100%;
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
-
-/* Hide delete button by default */
+/* Delete buttons */
 .delete-category-btn {
     display: none;
-    background-color: red;
-    color: white;
     padding: 10px 20px;
-    margin-top: 15px;
+    background: #ef4444;
+    color: white;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: scale(0.9);
+    transition: all 0.2s ease;
+    margin-top: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Show the delete button when it becomes visible */
 .delete-category-btn.visible {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
+    display: inline-block;
 }
 
-/* Flashcard delete "X" button styling */
+.delete-category-btn:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
 .delete-x-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 18px;
+    top: 12px;
+    right: 12px;
+    font-size: 16px;
     font-weight: bold;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 2px 6px;
-    border-radius: 50%;
+    color: #6b7280;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 4px 8px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.2s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
 }
 
 .delete-x-btn:hover {
-    transform: scale(1.2);
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: scale(1.1);
 }
 
-/* Modify the Generate Flashcards from Text section to remain fixed after form */
+/* Text to flashcard section */
 .text-to-flashcard-container {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-to-flashcard-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .text-to-flashcard-container textarea {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    margin-bottom: 15px;
+    height: 120px;
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
     font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: all 0.2s ease;
+    margin-bottom: 16px;
+}
+
+.text-to-flashcard-container textarea:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-to-flashcard-container textarea::placeholder {
+    color: #9ca3af;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .text-to-flashcard-container button {
-    padding: 10px 30px;
-    background: linear-gradient(135deg, #161616, #434343);
-    color: white;
+    padding: 14px 32px;
+    background: #000000;
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
 }
 
 .text-to-flashcard-container button:hover {
-    background: linear-gradient(135deg, #434343, #161616);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    background: #1a1a1a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Space at the bottom for the sticky section */
-body {
-    margin-bottom: 150px;
+/* Input validation */
+input:invalid {
+    border-color: #ef4444;
+}
+
+input:valid {
+    border-color: #22c55e;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 40px 20px;
+    }
+    
+    .header {
+        padding: 60px 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .gradient-text {
+        font-size: 1.2rem;
+    }
+    
+    .form-container,
+    .text-to-flashcard-container {
+        margin: 20px;
+        padding: 24px;
+    }
+    
+    .flashcard-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .flashcard {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard {
+        height: 300px;
+    }
+    
+    .flashcard-content {
+        font-size: 14px;
+    }
+    
+    .form-container button,
+    .text-to-flashcard-container button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
 }

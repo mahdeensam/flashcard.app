@@ -1,5 +1,5 @@
 // OpenAI API integration for generating flashcards from text
-const OPENAI_API_KEY = "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";
+const API_KEY = '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';
 
 // Default flashcard category
 let defaultCategory = "General";
